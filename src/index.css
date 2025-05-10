@@ -1,0 +1,57 @@
+@import "tailwindcss";
+@import "flowbite/src/themes/default";
+@import "flowbite";
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+
+:root {
+  --social-bg-color: rgba(217, 217, 217, 0.1);
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+@layer components {
+  .social-link {
+    @apply text-cyan-600 w-[30px] h-[30px] bg-[var(--social-bg-color)] rounded-full flex justify-center items-center relative z-10;
+  }
+  .row {
+    @apply flex;
+  }
+
+  .social-link::before {
+    content: "";
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 0.5s ease-in-out;
+    z-index: -1;
+  }
+
+  .social-link:hover::before {
+    transform: scale(1);
+  }
+}
+
+.section-spacing {
+  padding: 100px 0px;
+}
+
+.active {
+  color: rgb(8 145 178);
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+  background-color: #121212;
+  color: #fff;
+}
