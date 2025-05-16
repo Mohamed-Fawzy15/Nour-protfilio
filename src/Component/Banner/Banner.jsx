@@ -10,7 +10,7 @@ export default function Banner() {
 
   useEffect(() => {
     const typed = new Typed(ele.current, {
-      strings: ["Full stack developer"],
+      strings: ["Graphic Designer"],
       typeSpeed: 50,
       loop: true,
       loopCount: Infinity,
@@ -40,7 +40,7 @@ export default function Banner() {
                 Welcome to my Portfolio
               </span>
               <h1 className={`text-3xl font-bold mb-4 ${style.headerText}`}>
-                <p>Hi I'm Mohamed</p>
+                <p>Hi I'm Nour Fawzy</p>
                 <span ref={ele} className="px-2 inline-block" />
               </h1>
               <p className="mb-4 text-[#b8b8b8] text-lg">
